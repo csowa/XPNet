@@ -1,0 +1,22 @@
+﻿{
+  "PluginAssemblyName": "XPNet.LoggerPlugin.dll",
+  "PluginType": "XPNet.LoggerPlugin",
+  "LoggingEnabled": true,
+  "XPNetLogger": {
+    "StringData": [
+      "sim/aircraft/view/acf_tailnum"
+    ],
+    "IntData": [
+      "sim/aircraft/electrical/num_buses"
+    ],
+    "BoolArrayData": [
+      "sim/cockpit/engine/fadec_on"
+    ],
+    "FloatData": [
+      "sim/cockpit/electrical/instrument_brightness"
+    ],
+    "BoolData": [
+      "sim/cockpit/engine/inverter_eq"
+    ]
+  }
+}
