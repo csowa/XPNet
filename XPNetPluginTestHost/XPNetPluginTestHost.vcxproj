@@ -97,21 +97,23 @@
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;$(SolutionDir)$(PlatformTarget)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)XPNet.CLR\bin\$(ConfigurationName)\netcoreapp1.1\XPNet.CLR.dll" "$(OutputPath)"
-copy "$(SolutionDir)XPNet.LoggerPlugin\bin\$(ConfigurationName)\netcoreapp1.1\XPNet.LoggerPlugin.dll" "$(OutputPath)"
+      <Command>
+        copy "$(SolutionDir)XPNet.CLR\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.CLR.dll" "$(OutputPath)"
+        copy "$(SolutionDir)XPNet.LoggerPlugin\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.LoggerPlugin.dll" "$(OutputPath)"
 
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration\1.1.1\lib\netstandard1.1\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.abstractions\1.1.1\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.fileextensions\1.1.1\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.json\1.1.1\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.primitives\1.1.0\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.filesystemglobbing\1.1.0\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.physical\1.1.0\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.abstractions\1.1.0\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\newtonsoft.json\9.0.1\lib\netstandard1.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.fileextensions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.json\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        rem C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0
+        copy "C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.filesystemglobbing\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.physical\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\newtonsoft.json\11.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
 
-rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath="D:\Projects\XPlane\XPNet\Debug" /p:Platform=$(PlatformTarget) /p:Configuration=$(ConfigurationName)
-</Command>
+        rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath="D:\Projects\XPlane\XPNet\Debug" /p:Platform=$(PlatformTarget) /p:Configuration=$(ConfigurationName)
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -129,21 +131,23 @@ rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath=
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;$(SolutionDir)$(PlatformTarget)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)XPNet.CLR\bin\$(ConfigurationName)\netcoreapp1.1\XPNet.CLR.dll" "$(OutputPath)"
-copy "$(SolutionDir)XPNet.LoggerPlugin\bin\$(ConfigurationName)\netcoreapp1.1\XPNet.LoggerPlugin.dll" "$(OutputPath)"
+      <Command>
+        copy "$(SolutionDir)XPNet.CLR\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.CLR.dll" "$(OutputPath)"
+        copy "$(SolutionDir)XPNet.LoggerPlugin\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.LoggerPlugin.dll" "$(OutputPath)"
 
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration\1.1.1\lib\netstandard1.1\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.abstractions\1.1.1\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.fileextensions\1.1.1\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.json\1.1.1\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.primitives\1.1.0\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.filesystemglobbing\1.1.0\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.physical\1.1.0\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.abstractions\1.1.0\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\newtonsoft.json\9.0.1\lib\netstandard1.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.fileextensions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.json\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        rem C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0
+        copy "C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.filesystemglobbing\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.physical\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\newtonsoft.json\11.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
 
-rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath="D:\Projects\XPlane\XPNet\Debug" /p:Platform=$(PlatformTarget) /p:Configuration=$(ConfigurationName)
-</Command>
+        rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath="D:\Projects\XPlane\XPNet\Debug" /p:Platform=$(PlatformTarget) /p:Configuration=$(ConfigurationName)
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -165,21 +169,23 @@ rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath=
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;$(SolutionDir)$(PlatformTarget)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)XPNet.CLR\bin\$(ConfigurationName)\netcoreapp1.1\XPNet.CLR.dll" "$(OutputPath)"
-copy "$(SolutionDir)XPNet.LoggerPlugin\bin\$(ConfigurationName)\netcoreapp1.1\XPNet.LoggerPlugin.dll" "$(OutputPath)"
+      <Command>
+        copy "$(SolutionDir)XPNet.CLR\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.CLR.dll" "$(OutputPath)"
+        copy "$(SolutionDir)XPNet.LoggerPlugin\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.LoggerPlugin.dll" "$(OutputPath)"
 
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration\1.1.1\lib\netstandard1.1\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.abstractions\1.1.1\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.fileextensions\1.1.1\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.json\1.1.1\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.primitives\1.1.0\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.filesystemglobbing\1.1.0\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.physical\1.1.0\lib\netstandard1.3\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.abstractions\1.1.0\lib\netstandard1.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\newtonsoft.json\9.0.1\lib\netstandard1.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.fileextensions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.json\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        rem C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0
+        copy "C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.filesystemglobbing\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.physical\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\newtonsoft.json\11.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
 
-rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath="D:\Projects\XPlane\XPNet\Debug" /p:Platform=$(PlatformTarget) /p:Configuration=$(ConfigurationName)
-</Command>
+        rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath="D:\Projects\XPlane\XPNet\Debug" /p:Platform=$(PlatformTarget) /p:Configuration=$(ConfigurationName)
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
@@ -201,22 +207,23 @@ rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath=
       <AdditionalLibraryDirectories>$(SolutionDir)$(Platform)\$(Configuration)\;$(SolutionDir)$(PlatformTarget)\$(Configuration)\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
     <PostBuildEvent>
-      <Command>copy "$(SolutionDir)XPNet.CLR\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.CLR.dll" "$(OutputPath)"
-copy "$(SolutionDir)XPNet.LoggerPlugin\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.LoggerPlugin.dll" "$(OutputPath)"
+      <Command>
+        copy "$(SolutionDir)XPNet.CLR\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.CLR.dll" "$(OutputPath)"
+        copy "$(SolutionDir)XPNet.LoggerPlugin\bin\$(ConfigurationName)\netcoreapp2.0\XPNet.LoggerPlugin.dll" "$(OutputPath)"
 
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.fileextensions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.json\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
-rem C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0
-copy "C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0\lib\netstandard2.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.filesystemglobbing\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.physical\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
-copy "$(USERPROFILE)\.nuget\packages\newtonsoft.json\11.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.fileextensions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.configuration.json\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        rem C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0
+        copy "C:\Program Files\dotnet\sdk\NuGetFallbackFolder\microsoft.extensions.primitives\2.0.0\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.filesystemglobbing\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.physical\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\microsoft.extensions.fileproviders.abstractions\2.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
+        copy "$(USERPROFILE)\.nuget\packages\newtonsoft.json\11.0.1\lib\netstandard2.0\*.dll" "$(OutputPath)"
 
-rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath="D:\Projects\XPlane\XPNet\Debug" /p:Platform=$(PlatformTarget) /p:Configuration=$(ConfigurationName)
-</Command>
+        rem msbuild "$(SolutionDir)XPNet.CLR\XPNet.CLR.csproj" /t:Publish /p:OutputPath="D:\Projects\XPlane\XPNet\Debug" /p:Platform=$(PlatformTarget) /p:Configuration=$(ConfigurationName)
+      </Command>
     </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemGroup>
